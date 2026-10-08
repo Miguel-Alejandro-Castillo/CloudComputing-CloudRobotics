@@ -1,0 +1,408 @@
+[
+    {
+        "id": "31c3b864b7631f94",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a47467351b54ba2d",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0c0752cb05fff331",
+        "type": "ui-base",
+        "name": "INSTANCIA 1 – GRUPO 16 - 2026",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "dashboard",
+        "navigationStyle": "none",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "9cf3f973630b6958",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "359626acd6edf9ad",
+        "type": "ui-page",
+        "name": "Page",
+        "ui": "0c0752cb05fff331",
+        "path": "",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9cf3f973630b6958",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "3c0df83d95755b63",
+        "type": "ui-group",
+        "name": "CONTROL REMOTO",
+        "page": "359626acd6edf9ad",
+        "width": "4",
+        "height": "8",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "8135eaef85594e02",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ec4d0baf6cc9d74b",
+        "type": "ui-button",
+        "z": "31c3b864b7631f94",
+        "group": "3c0df83d95755b63",
+        "name": "OFF",
+        "label": "OFF",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "center",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 70,
+        "y": 220,
+        "wires": [
+            [
+                "36ac0cda74ce4bc9"
+            ]
+        ]
+    },
+    {
+        "id": "423549fcd8cc474a",
+        "type": "ui-button",
+        "z": "31c3b864b7631f94",
+        "group": "3c0df83d95755b63",
+        "name": "ON",
+        "label": "ON",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 70,
+        "y": 40,
+        "wires": [
+            [
+                "36ac0cda74ce4bc9"
+            ]
+        ]
+    },
+    {
+        "id": "64e4771a48dd50d8",
+        "type": "ui-text",
+        "z": "31c3b864b7631f94",
+        "group": "3c0df83d95755b63",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "name": "Estado LED",
+        "label": "Estado LED",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "15",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 690,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ba0a60e03dccbaa9",
+        "type": "ui-switch",
+        "z": "31c3b864b7631f94",
+        "name": "Timer 5s",
+        "label": "Timer 5s",
+        "group": "3c0df83d95755b63",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 80,
+        "y": 300,
+        "wires": [
+            [
+                "87995248d832f5cd"
+            ]
+        ]
+    },
+    {
+        "id": "bc202e84f5559f22",
+        "type": "ui-markdown",
+        "z": "31c3b864b7631f94",
+        "group": "3c0df83d95755b63",
+        "name": "Bloque relleno",
+        "order": 5,
+        "width": "4",
+        "height": "2",
+        "content": "",
+        "className": "",
+        "x": 100,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4754f848a87474e4",
+        "type": "mqtt out",
+        "z": "31c3b864b7631f94",
+        "name": "mqtt publish action",
+        "topic": "cloudrobotics/grupo16/iluminacion/comando",
+        "qos": "",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8135eaef85594e02",
+        "x": 710,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "36ac0cda74ce4bc9",
+        "type": "change",
+        "z": "31c3b864b7631f94",
+        "name": "generar accion encedido/apagado",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "{\"accion\":\"encender\",\"valor\":1}",
+                "tot": "json"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "{\"accion\":\"apagar\",\"valor\":0}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "4754f848a87474e4"
+            ]
+        ]
+    },
+    {
+        "id": "87995248d832f5cd",
+        "type": "change",
+        "z": "31c3b864b7631f94",
+        "name": "generar accion timer",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "{\"accion\":\"timer\",\"valor\":10,\"activado\":true}",
+                "tot": "json"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "{\"accion\":\"timer\",\"valor\":10,\"activado\":false}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "4754f848a87474e4"
+            ]
+        ]
+    },
+    {
+        "id": "fcf7052ad60ab3aa",
+        "type": "mqtt in",
+        "z": "31c3b864b7631f94",
+        "name": "recibir estado iluminacion",
+        "topic": "cloudrobotics/grupo16/iluminacion/estado",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "8135eaef85594e02",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 410,
+        "y": 40,
+        "wires": [
+            [
+                "64e4771a48dd50d8"
+            ]
+        ]
+    }
+]

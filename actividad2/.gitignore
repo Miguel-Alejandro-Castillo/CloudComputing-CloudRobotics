@@ -1,0 +1,64 @@
+# =========================
+# Docker
+# =========================
+*.log
+docker-compose.override.yml
+
+# =========================
+# Node-RED runtime
+# =========================
+data/.config.*
+data_v2/.config.*
+
+# Credenciales Node-RED
+data/*_cred.json
+data_v2/*_cred.json
+
+# Sesiones y runtime
+data/.sessions.json
+data_v2/.sessions.json
+
+# Logs
+data/*.log
+data_v2/*.log
+
+# =========================
+# MQTT / Mosquitto
+# =========================
+mosquitto/data/*
+mosquitto/log/*
+
+!mosquitto/data/.gitkeep
+!mosquitto/log/.gitkeep
+
+# =========================
+# AWS IoT CERTIFICADOS
+# =========================
+*.pem
+*.key
+*.crt
+*.csr
+AmazonRootCA1.pem
+
+# =========================
+# Entornos
+# =========================
+.env
+.env.*
+
+# =========================
+# Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VSCode
+# =========================
+.vscode/
+
+# =========================
+# Copias de seguridad
+# =========================
+*.bak
+*~

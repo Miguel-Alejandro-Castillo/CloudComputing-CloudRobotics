@@ -1,0 +1,50 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+  nodered:
+    container_name: nodered
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      # Si sólo querés acceso local/túnel SSH seguro: "127.0.0.1:1880:1880"
+      # Si vas a exponer mediante proxy inverso Nginx o SG:
+      - "1880:1880"
+    environment:
+      - TZ=America/Argentina/Buenos_Aires
+    volumes:
+      - ./data:/data
+    # Limitar memoria (recomendado en instancias EC2 tipo t3.micro/t4g.nano)
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+  nodered_instance2:
+    container_name: nodered_v2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      # Si sólo querés acceso local/túnel SSH seguro: "127.0.0.1:1880:1880"
+      # Si vas a exponer mediante proxy inverso Nginx o SG:
+      - "1881:1880"
+    environment:
+      - TZ=America/Argentina/Buenos_Aires
+    volumes:
+      - ./data_v2:/data
+    # Limitar memoria (recomendado en instancias EC2 tipo t3.micro/t4g.nano)
+    deploy:
+      resources:
+        limits:
+          memory: 512M

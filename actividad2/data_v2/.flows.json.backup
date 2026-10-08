@@ -1,0 +1,417 @@
+[
+    {
+        "id": "a4243ca851f0b92e",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "859625b718cd78eb",
+        "type": "ui-base",
+        "name": "INSTANCIA 2 – GRUPO 16 - 2026",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "dashboard",
+        "navigationStyle": "none",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "e3af6fe1bd6aa4b2",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "e0b07a7ba9b41326",
+        "type": "ui-page",
+        "name": "Page",
+        "ui": "859625b718cd78eb",
+        "path": "",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "e3af6fe1bd6aa4b2",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "6202fac145914082",
+        "type": "ui-group",
+        "name": "ILUMINACION JARDIN",
+        "page": "e0b07a7ba9b41326",
+        "width": "4",
+        "height": "8",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "11af9b882edd55d5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "892c44f9c1f1e15f",
+        "type": "ui-text",
+        "z": "a4243ca851f0b92e",
+        "group": "6202fac145914082",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "ESTADO LED",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 760,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ef32f812783d3bef",
+        "type": "ui-text",
+        "z": "a4243ca851f0b92e",
+        "group": "6202fac145914082",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "ESTADO TIMER",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "04d908264d0b1408",
+        "type": "ui-template",
+        "z": "a4243ca851f0b92e",
+        "group": "6202fac145914082",
+        "page": "",
+        "ui": "",
+        "name": "ENCENDER / APAGAR LED",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "head": "",
+        "format": "<template>\n    <div class=\"pulso-container\">\n        <span class=\"pulso-titulo\">LED</span>\n        <div class=\"pulso-ring\" :class=\"estado ? 'verde' : 'rojo'\">\n\n            <div class=\"pulso-contenido\">\n                <div class=\"pulso-valor\">\n                    {{ estado }}\n                </div>\n                <div class=\"pulso-label\">\n                    Pulso\n                </div>\n            </div>\n\n        </div>\n    </div>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                estado: 1\n            }\n        }\n        ,\n        watch: {\n            msg() {\n                if (this.msg?.payload.valor !== undefined) {\n                    this.estado=Number(this.msg.payload.valor)\n                }\n            }\n        }\n    }\n\n</script>\n\n<style>\n/*\n.pulso-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n*/\n\n.pulso-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 2px;\n}\n\n.pulso-titulo {\n    font-size: 14px;\n    font-weight: bold; \n}\n\n.pulso-ring {\n    width: 200px;\n    height: 200px;\n\n    border-radius: 50%;\n    border: 28px solid;\n\n    background: white;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.pulso-contenido {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.pulso-valor {\n    font-size: 20px;\n    font-weight: bold;\n    line-height: 1;\n}\n\n.pulso-label {\n    margin-top: 4px;\n    font-size: 14px;\n    /* font-weight: bold; */\n    letter-spacing: 1px;\n}\n\n.verde {\n    border-color: #22c55e;\n}\n\n.rojo {\n    border-color: #ef4444;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 520,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77bec69aaa347483",
+        "type": "mqtt in",
+        "z": "a4243ca851f0b92e",
+        "name": "mqtt subscribe action",
+        "topic": "cloudrobotics/grupo16/iluminacion/comando",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "11af9b882edd55d5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "53bbdb7958b7c2bc"
+            ]
+        ]
+    },
+    {
+        "id": "53bbdb7958b7c2bc",
+        "type": "switch",
+        "z": "a4243ca851f0b92e",
+        "name": "switch accion",
+        "property": "payload.accion",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "^(encender|apagar)$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "eq",
+                "v": "timer",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 230,
+        "y": 280,
+        "wires": [
+            [
+                "d0a5381291f135f9",
+                "04d908264d0b1408",
+                "6141b5063018adb9"
+            ],
+            [
+                "0d3d496c4196aa45"
+            ]
+        ]
+    },
+    {
+        "id": "d0a5381291f135f9",
+        "type": "change",
+        "z": "a4243ca851f0b92e",
+        "name": "generar  texto estado led",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload.valor",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "ENCENDIDO",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.valor",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "APAGADO",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload.valor",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 80,
+        "wires": [
+            [
+                "892c44f9c1f1e15f",
+                "c0141400fcc81c5b"
+            ]
+        ]
+    },
+    {
+        "id": "0d3d496c4196aa45",
+        "type": "function",
+        "z": "a4243ca851f0b92e",
+        "name": "guardar valores timer",
+        "func": "flow.set(\"timerActivado\", msg.payload.activado);\nflow.set(\"timerSegundos\", msg.payload.valor);\nif (msg.payload.activado)\n    msg.payload = \"ACTIVADO\"\nelse\n    msg.payload = \"DESACTIVADO\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nif (flow.get(\"timerActivado\") === undefined)\n    flow.set(\"timerActivado\", false);\n\nif (flow.get(\"timerSegundos\") === undefined)\n    flow.set(\"timerSegundos\", 5);\n\nnode.warn(\n    `Inicio: timer=${flow.get(\"timerActivado\")} segundos=${flow.get(\"timerSegundos\")}`\n);",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 380,
+        "wires": [
+            [
+                "ef32f812783d3bef"
+            ]
+        ]
+    },
+    {
+        "id": "6141b5063018adb9",
+        "type": "function",
+        "z": "a4243ca851f0b92e",
+        "name": "check timer al encender",
+        "func": "if (msg.payload.accion !== \"encender\") {\n    return null;\n}\n\nconst timerActivado = flow.get(\"timerActivado\");\nconst timerSegundos = flow.get(\"timerSegundos\");\n\nif (!timerActivado) {\n    return null;\n}\n\nmsg.delay = timerSegundos * 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "33995f1a7d3c13a4"
+            ]
+        ]
+    },
+    {
+        "id": "33995f1a7d3c13a4",
+        "type": "delay",
+        "z": "a4243ca851f0b92e",
+        "name": "Delay",
+        "pauseType": "delayv",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 180,
+        "wires": [
+            [
+                "8ce872d43bc0e222"
+            ]
+        ]
+    },
+    {
+        "id": "c0141400fcc81c5b",
+        "type": "mqtt out",
+        "z": "a4243ca851f0b92e",
+        "name": "enviar estado iluminacion",
+        "topic": "cloudrobotics/grupo16/iluminacion/estado",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "11af9b882edd55d5",
+        "x": 790,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8ce872d43bc0e222",
+        "type": "change",
+        "z": "a4243ca851f0b92e",
+        "name": "Preparar accion apagado",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"accion\":\"apagar\",\"valor\":0}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 180,
+        "wires": [
+            [
+                "53bbdb7958b7c2bc"
+            ]
+        ]
+    }
+]
