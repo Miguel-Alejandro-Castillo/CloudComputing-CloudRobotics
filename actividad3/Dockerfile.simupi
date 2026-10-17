@@ -2,13 +2,14 @@ FROM golang:1.27-alpine AS builder
 
 WORKDIR /src
 
-COPY go.mod go.sum ./
+COPY simupi/go.mod simupi/go.sum ./
 
-# Download Go module dependencies
 RUN go mod download
 
-COPY . .
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /out/simupi .
+COPY simupi/ .
+
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -o /out/simupi .
 
 FROM alpine:3.20
 
@@ -20,6 +21,9 @@ RUN apk add --no-cache ca-certificates && \
     chown -R simupi:simupi /app
 
 COPY --from=builder /out/simupi /app/simupi
+
+# Nuestro escenario
+COPY --chown=simupi:simupi water_tank.json /app/data/scenarios/water_tank.json
 
 ENV PORT=5000
 

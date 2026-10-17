@@ -1,9 +1,0 @@
-simupi
-simupi.exe
-simupi-linux
-simupi-windows.exe
-simupi-darwin
-dist/
-data/
-logs/
-*.log

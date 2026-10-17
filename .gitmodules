@@ -1,0 +1,3 @@
+[submodule "actividad3/simupi"]
+	path = actividad3/simupi
+	url = https://github.com/seguren/simupi.git
