@@ -1,0 +1,43 @@
+{
+  "name": "water tank with pump",
+  "inputs": [
+    26
+  ],
+  "outputs": [
+    27,
+    28
+  ],
+  "aliases": {
+    "27": "pump",
+    "28": "alarm"
+  },
+  "sensors": {
+    "levelWater": {
+      "mode": "triangle",
+      "min": 0,
+      "max": 100,
+      "interval": 1,
+      "period": 120,
+      "unit": "%",
+      "pin": 17
+    },
+    "turbidity": {
+      "mode": "walk",
+      "min": 0,
+      "max": 100,
+      "interval": 1,
+      "step": 1,
+      "unit": "NTU",
+      "pin": 18
+    },
+    "waterPressure": {
+      "mode": "walk",
+      "min": 0.0,
+      "max": 3.5,
+      "interval": 1,
+      "step": 0.1,
+      "unit": "bar",
+      "pin": 19
+    }
+  }
+}
