@@ -9,7 +9,7 @@
   ],
   "aliases": {
     "27": "pump",
-    "28": "valve"
+    "28": "alarm"
   },
   "sensors": {
     "levelWater": {

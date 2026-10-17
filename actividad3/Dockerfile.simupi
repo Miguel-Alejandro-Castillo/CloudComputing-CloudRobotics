@@ -22,8 +22,6 @@ RUN apk add --no-cache ca-certificates && \
 
 COPY --from=builder /out/simupi /app/simupi
 
-# Nuestro escenario
-COPY --chown=simupi:simupi water_tank.json /app/data/scenarios/water_tank.json
 
 ENV PORT=5000
 

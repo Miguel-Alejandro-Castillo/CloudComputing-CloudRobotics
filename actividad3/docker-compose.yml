@@ -2,11 +2,11 @@ services:
   simupi:
     container_name: simupi
     build:
-      context: ./simupi
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.simupi
     restart: unless-stopped
     volumes:
-      - ./simupi:/app/data
+      - ./simupi-data:/app/data
     ports:
       - "5000:5000"
       - "1884:1883"
