@@ -2,15 +2,7 @@
     {
         "id": "31c3b864b7631f94",
         "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "a47467351b54ba2d",
-        "type": "tab",
-        "label": "Flow 2",
+        "label": "Instancia 1",
         "disabled": false,
         "info": "",
         "env": []

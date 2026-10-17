@@ -205,7 +205,7 @@
         "id": "77bec69aaa347483",
         "type": "mqtt in",
         "z": "a4243ca851f0b92e",
-        "name": "mqtt subscribe action",
+        "name": "subscribir accion",
         "topic": "cloudrobotics/grupo16/iluminacion/comando",
         "qos": "0",
         "datatype": "json",
@@ -214,7 +214,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
+        "x": 100,
         "y": 100,
         "wires": [
             [

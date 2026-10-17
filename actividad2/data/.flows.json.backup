@@ -2,7 +2,7 @@
     {
         "id": "31c3b864b7631f94",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Instancia 1",
         "disabled": false,
         "info": "",
         "env": []
@@ -294,7 +294,7 @@
         "id": "4754f848a87474e4",
         "type": "mqtt out",
         "z": "31c3b864b7631f94",
-        "name": "mqtt publish action",
+        "name": "publicar accion",
         "topic": "cloudrobotics/grupo16/iluminacion/comando",
         "qos": "",
         "retain": "false",
@@ -304,7 +304,7 @@
         "correl": "",
         "expiry": "",
         "broker": "8135eaef85594e02",
-        "x": 710,
+        "x": 700,
         "y": 220,
         "wires": []
     },

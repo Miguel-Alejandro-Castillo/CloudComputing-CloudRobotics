@@ -1,0 +1,1980 @@
+[
+    {
+        "id": "8de13998b01a2eac",
+        "type": "tab",
+        "label": "GreenHouse",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fea5cd999144e856",
+        "type": "tab",
+        "label": "Garage",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "253bdab4982a9a38",
+        "type": "tab",
+        "label": "Tanque de Agua con Bomba",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e7cd09105e2c1a23",
+        "type": "tab",
+        "label": "Debug GPIO input",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "841a7cfea21fc24c",
+        "type": "tab",
+        "label": "Debug GPIO output",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "df4c5fa2f40d9ce3",
+        "type": "tab",
+        "label": "LEDS",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cf03ab0e689813f0",
+        "type": "tab",
+        "label": "Sensor PIR",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "56926dd724184b8c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "simupi",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c994e8b281604d7e",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "dashboard",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "8c6b103269902201",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "1590ce3eb692d964",
+        "type": "ui-page",
+        "name": "Green House",
+        "ui": "c994e8b281604d7e",
+        "path": "/greenhouse",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "8c6b103269902201",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "485cb9e0b0b29368",
+        "type": "ui-group",
+        "name": "Green House",
+        "page": "1590ce3eb692d964",
+        "width": "12",
+        "height": "8",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "b1f06f9f265022cd",
+        "type": "ui-page",
+        "name": "Garage",
+        "ui": "c994e8b281604d7e",
+        "path": "/garage",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "8c6b103269902201",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": -1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "06b29495e4748fc0",
+        "type": "ui-group",
+        "name": "Garage",
+        "page": "b1f06f9f265022cd",
+        "width": "12",
+        "height": "8",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "0fe42953e5bff762",
+        "type": "ui-page",
+        "name": "Tank Water With Pump",
+        "ui": "c994e8b281604d7e",
+        "path": "/tankwaterwithpump",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "8c6b103269902201",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": -1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "27f9addadb448f94",
+        "type": "ui-group",
+        "name": "Tank Water With Pump",
+        "page": "0fe42953e5bff762",
+        "width": "12",
+        "height": "6",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "5d52fd25fbf61d29",
+        "type": "ui-gauge",
+        "z": "8de13998b01a2eac",
+        "name": "Gauge Humedad",
+        "group": "485cb9e0b0b29368",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "6",
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Humedad",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0aa5fb959def3d97",
+        "type": "ui-gauge",
+        "z": "8de13998b01a2eac",
+        "name": "Gauge Temperatura",
+        "group": "485cb9e0b0b29368",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "6",
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "24",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "32",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 440,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f87f6f9bb4abbced",
+        "type": "mqtt in",
+        "z": "8de13998b01a2eac",
+        "name": "",
+        "topic": "sensor/humidity",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "5d52fd25fbf61d29",
+                "58e9360fe078cd47"
+            ]
+        ]
+    },
+    {
+        "id": "46242f8ee4275d8d",
+        "type": "mqtt in",
+        "z": "8de13998b01a2eac",
+        "name": "sensor/temperature",
+        "topic": "sensor/temperature",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "0aa5fb959def3d97",
+                "eb45d5ee9440ec6d"
+            ]
+        ]
+    },
+    {
+        "id": "eb45d5ee9440ec6d",
+        "type": "ui-chart",
+        "z": "8de13998b01a2eac",
+        "group": "485cb9e0b0b29368",
+        "name": "Historico de Temperatura",
+        "label": "Historico de Temperatura",
+        "order": 9007199254740991,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": "6",
+        "className": "",
+        "interpolation": "linear",
+        "x": 450,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58e9360fe078cd47",
+        "type": "ui-chart",
+        "z": "8de13998b01a2eac",
+        "group": "485cb9e0b0b29368",
+        "name": "Historico de humedad",
+        "label": "Historico de Humedad",
+        "order": 9007199254740991,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": "6",
+        "className": "",
+        "interpolation": "linear",
+        "x": 440,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73994d6208249fc5",
+        "type": "ui-switch",
+        "z": "8de13998b01a2eac",
+        "name": "Interruptor de la Bomba",
+        "label": "Interruptor de la bomba",
+        "group": "485cb9e0b0b29368",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "label",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "3abf21c6531a20d7"
+            ]
+        ]
+    },
+    {
+        "id": "cce7f2769f625fb1",
+        "type": "mqtt out",
+        "z": "8de13998b01a2eac",
+        "name": "GPIO output fan",
+        "topic": "gpio/out/22",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "56926dd724184b8c",
+        "x": 440,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3abf21c6531a20d7",
+        "type": "mqtt out",
+        "z": "8de13998b01a2eac",
+        "name": "GPIO output pump",
+        "topic": "gpio/out/24",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "56926dd724184b8c",
+        "x": 450,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d52dacd885bea4fa",
+        "type": "ui-switch",
+        "z": "8de13998b01a2eac",
+        "name": "Interruptor del ventilador",
+        "label": "Interruptor del ventilador",
+        "group": "485cb9e0b0b29368",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "label",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "cce7f2769f625fb1"
+            ]
+        ]
+    },
+    {
+        "id": "a00670882661be97",
+        "type": "mqtt in",
+        "z": "fea5cd999144e856",
+        "name": "",
+        "topic": "sensor/distance",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "2c27d92756ab7026",
+                "d603a952201bda7a"
+            ]
+        ]
+    },
+    {
+        "id": "2c27d92756ab7026",
+        "type": "ui-gauge",
+        "z": "fea5cd999144e856",
+        "name": "Gauge Distance",
+        "group": "06b29495e4748fc0",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "6",
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Distancia",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "cm",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "100",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "200",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "400",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d603a952201bda7a",
+        "type": "ui-chart",
+        "z": "fea5cd999144e856",
+        "group": "06b29495e4748fc0",
+        "name": "Historico de Distancia",
+        "label": "Historico de Distancia",
+        "order": 9007199254740991,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "12",
+        "height": "6",
+        "className": "",
+        "interpolation": "linear",
+        "x": 400,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd4d51d2d72c0a61",
+        "type": "ui-switch",
+        "z": "fea5cd999144e856",
+        "name": "Interruptor de la luz",
+        "label": "Interruptor de la luz",
+        "group": "06b29495e4748fc0",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "label",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "c7e9b49a38f6e198"
+            ]
+        ]
+    },
+    {
+        "id": "edc4d30c60bf0adf",
+        "type": "ui-switch",
+        "z": "fea5cd999144e856",
+        "name": "Interruptor de la puerta",
+        "label": "Interruptor de la puerta",
+        "group": "06b29495e4748fc0",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "label",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "37d60af1f854eefa"
+            ]
+        ]
+    },
+    {
+        "id": "37d60af1f854eefa",
+        "type": "mqtt out",
+        "z": "fea5cd999144e856",
+        "name": "GPIO output door",
+        "topic": "gpio/out/22",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "56926dd724184b8c",
+        "x": 390,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c7e9b49a38f6e198",
+        "type": "mqtt out",
+        "z": "fea5cd999144e856",
+        "name": "GPIO output light",
+        "topic": "gpio/out/24",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "56926dd724184b8c",
+        "x": 390,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "0cfc51b4f17b361b",
+        "type": "ui-gauge",
+        "z": "253bdab4982a9a38",
+        "name": "gauge Nivel de Agua",
+        "group": "27f9addadb448f94",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "4",
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Nivel de Agua",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 400,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa67aff0a774f004",
+        "type": "ui-gauge",
+        "z": "253bdab4982a9a38",
+        "name": "gauge Presion de Agua",
+        "group": "27f9addadb448f94",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "4",
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Presion de Agua",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "bar",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "0.0",
+        "max": "3.5",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 470,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3d6e30576de3ee7",
+        "type": "ui-gauge",
+        "z": "253bdab4982a9a38",
+        "name": "gauge Turbidez de Agua",
+        "group": "27f9addadb448f94",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Turbidez de Agua",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "NTU",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "5",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 470,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66114d6f00526750",
+        "type": "mqtt in",
+        "z": "253bdab4982a9a38",
+        "name": "sensor/levelWater",
+        "topic": "sensor/levelWater",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "0cfc51b4f17b361b",
+                "529d4441df156a78",
+                "b928847f64d59069"
+            ]
+        ]
+    },
+    {
+        "id": "39cfa28c92ef6088",
+        "type": "mqtt in",
+        "z": "253bdab4982a9a38",
+        "name": "sensor/pressure",
+        "topic": "sensor/waterPressure",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "aa67aff0a774f004",
+                "e68ffb1d33df2b9f",
+                "a63278e38f2f6131"
+            ]
+        ]
+    },
+    {
+        "id": "c667a172e60e47d1",
+        "type": "mqtt in",
+        "z": "253bdab4982a9a38",
+        "name": "sensor/turbidity",
+        "topic": "sensor/turbidity",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 500,
+        "wires": [
+            [
+                "c3d6e30576de3ee7",
+                "2442c173108df472",
+                "a63278e38f2f6131"
+            ]
+        ]
+    },
+    {
+        "id": "529d4441df156a78",
+        "type": "ui-chart",
+        "z": "253bdab4982a9a38",
+        "group": "27f9addadb448f94",
+        "name": "Historico de Nivel de Agua",
+        "label": "Historico de Nivel de Agua",
+        "order": 9007199254740991,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "4",
+        "height": "6",
+        "className": "",
+        "interpolation": "linear",
+        "x": 420,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e68ffb1d33df2b9f",
+        "type": "ui-chart",
+        "z": "253bdab4982a9a38",
+        "group": "27f9addadb448f94",
+        "name": "Historico de Presion de Agua",
+        "label": "Historico de Presion de Agua",
+        "order": 9007199254740991,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "4",
+        "height": "6",
+        "className": "",
+        "interpolation": "linear",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2442c173108df472",
+        "type": "ui-chart",
+        "z": "253bdab4982a9a38",
+        "group": "27f9addadb448f94",
+        "name": "Historico de Turbidez",
+        "label": "Historico de Turbidez",
+        "order": 9007199254740991,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "4",
+        "height": "6",
+        "className": "",
+        "interpolation": "linear",
+        "x": 460,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9ea9c6d0c29dd4f",
+        "type": "mqtt out",
+        "z": "253bdab4982a9a38",
+        "name": "GPIO output pump",
+        "topic": "gpio/out/27",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "56926dd724184b8c",
+        "x": 730,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "124748dd038dbcef",
+        "type": "ui-switch",
+        "z": "253bdab4982a9a38",
+        "name": "switch de bomba de agua",
+        "label": "Interruptor de bomba de agua",
+        "group": "27f9addadb448f94",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "label",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 730,
+        "y": 100,
+        "wires": [
+            [
+                "a9ea9c6d0c29dd4f"
+            ]
+        ]
+    },
+    {
+        "id": "b928847f64d59069",
+        "type": "function",
+        "z": "253bdab4982a9a38",
+        "name": "Umbrales e Histeresis",
+        "func": "const level = Number(msg.payload);\nif (level <= 5) {\n    msg.payload = 1\n    return msg;\n}\n\nif (level >= 95) {\n    msg.payload = 0\n    return msg;\n}\n\nreturn null;\n\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "a9ea9c6d0c29dd4f",
+                "124748dd038dbcef"
+            ]
+        ]
+    },
+    {
+        "id": "190309bd0718d407",
+        "type": "ui-template",
+        "z": "253bdab4982a9a38",
+        "group": "27f9addadb448f94",
+        "page": "",
+        "ui": "",
+        "name": "Estado del Sistema",
+        "order": 0,
+        "width": "9",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div v-if=\"msg?.payload\" class=\"status\">\n\n        <div v-if=\"msg.payload.alarms.length === 0\" class=\"box normal\">\n            ✓ Funcionamiento normal\n        </div>\n\n        <div v-for=\"alarm in msg.payload.alarms\" :key=\"alarm\" class=\"box alarm\">\n            ⚠ {{ alarm }}\n        </div>\n\n    </div>\n</template>\n\n<style>\n    .status {\n        display: flex;\n        flex-direction: row;\n        flex-wrap: wrap;\n        gap: 0.5rem;\n        width: 100%;\n    }\n\n    .box {\n        padding: 10px 14px;\n        border-radius: 7px;\n        color: white;\n        font-weight: 600;\n        text-align: center;\n    }\n\n    .normal {\n        background: #43a047;\n    }\n\n    .alarm {\n        background: #e53935;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 690,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a63278e38f2f6131",
+        "type": "function",
+        "z": "253bdab4982a9a38",
+        "name": "Evaluar Alarmas",
+        "func": "const value = Number(msg.payload);\n\nif (msg.topic === \"sensor/turbidity\") {\n    flow.set(\"turbidity\", value);\n}\n\nif (msg.topic === \"sensor/waterPressure\") {\n    flow.set(\"waterPressure\", value);\n}\n\nconst turbidity = flow.get(\"turbidity\");\nconst waterPressure = flow.get(\"waterPressure\");\n\nconst alarms = [];\n\nif (turbidity !== undefined && turbidity >= 20) {\n    alarms.push(`Turbidez elevada: ${turbidity.toFixed(2)} NTU`);\n}\n\nif (waterPressure !== undefined && waterPressure >= 3) {\n    alarms.push(`Presión elevada: ${waterPressure.toFixed(2)} bar`);\n}\n\nmsg.payload = {\n    alarms: alarms\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "190309bd0718d407"
+            ]
+        ]
+    },
+    {
+        "id": "f159322af3adccc0",
+        "type": "mqtt in",
+        "z": "e7cd09105e2c1a23",
+        "name": "GPIO  input 17",
+        "topic": "gpio/in/17",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "336fa391ed71f62d"
+            ]
+        ]
+    },
+    {
+        "id": "25faf1d27e4e08a6",
+        "type": "mqtt in",
+        "z": "e7cd09105e2c1a23",
+        "name": "GPIO  input 18",
+        "topic": "gpio/in/18",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "336fa391ed71f62d"
+            ]
+        ]
+    },
+    {
+        "id": "336fa391ed71f62d",
+        "type": "debug",
+        "z": "e7cd09105e2c1a23",
+        "name": "debug GPIO input",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "047af5e72e7bdb25",
+        "type": "mqtt in",
+        "z": "e7cd09105e2c1a23",
+        "name": "GPIO  input 23",
+        "topic": "gpio/in/23",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "336fa391ed71f62d"
+            ]
+        ]
+    },
+    {
+        "id": "c9234b4bef9003b6",
+        "type": "mqtt in",
+        "z": "841a7cfea21fc24c",
+        "name": "GPIO output 22",
+        "topic": "gpio/out/22",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "1072b0fce9fcbe20"
+            ]
+        ]
+    },
+    {
+        "id": "3534ab3c5b07bdb2",
+        "type": "mqtt in",
+        "z": "841a7cfea21fc24c",
+        "name": "GPIO output 24",
+        "topic": "gpio/out/24",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56926dd724184b8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "1072b0fce9fcbe20"
+            ]
+        ]
+    },
+    {
+        "id": "1072b0fce9fcbe20",
+        "type": "debug",
+        "z": "841a7cfea21fc24c",
+        "name": "debug GPIO output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "23f5c2388f5a8141",
+        "type": "inject",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "6a21c007bc0d956b"
+            ]
+        ]
+    },
+    {
+        "id": "4d0d0c65bbe6486a",
+        "type": "inject",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "0",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "6a21c007bc0d956b"
+            ]
+        ]
+    },
+    {
+        "id": "6a21c007bc0d956b",
+        "type": "pi-gpiod out",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "Green LED",
+        "host": "163.10.53.51",
+        "port": "8888",
+        "pin": "21",
+        "set": "",
+        "level": "0",
+        "out": "pwm",
+        "sermin": "1000",
+        "sermax": "2000",
+        "freq": "50",
+        "x": 550,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "40b47687a3a11339",
+        "type": "ui-slider",
+        "z": "df4c5fa2f40d9ce3",
+        "group": "",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "b3a72bcaee74450d"
+            ]
+        ]
+    },
+    {
+        "id": "b3a72bcaee74450d",
+        "type": "pi-gpiod out",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "Setup PWM",
+        "host": "163.10.53.51",
+        "port": 8888,
+        "pin": "20",
+        "set": "",
+        "level": "0",
+        "out": "out",
+        "sermin": "1000",
+        "sermax": "2000",
+        "freq": "800",
+        "x": 570,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6e8c8df75621298e",
+        "type": "inject",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 540,
+        "wires": [
+            [
+                "36b9191d7e0dd121"
+            ]
+        ]
+    },
+    {
+        "id": "844410e9652648e1",
+        "type": "inject",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "0",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "36b9191d7e0dd121"
+            ]
+        ]
+    },
+    {
+        "id": "36b9191d7e0dd121",
+        "type": "pi-gpiod out",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "Yellow LED",
+        "host": "163.10.53.51",
+        "port": "8888",
+        "pin": "20",
+        "set": "",
+        "level": "0",
+        "out": "pwm",
+        "sermin": "1000",
+        "sermax": "2000",
+        "freq": "50",
+        "x": 570,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "296295ceb854186f",
+        "type": "inject",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 820,
+        "wires": [
+            [
+                "fbb331e381f36629"
+            ]
+        ]
+    },
+    {
+        "id": "10c46a8cc3440ed1",
+        "type": "inject",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "0",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 980,
+        "wires": [
+            [
+                "fbb331e381f36629"
+            ]
+        ]
+    },
+    {
+        "id": "fbb331e381f36629",
+        "type": "pi-gpiod out",
+        "z": "df4c5fa2f40d9ce3",
+        "name": "Red LED",
+        "host": "163.10.53.51",
+        "port": "8888",
+        "pin": "16",
+        "set": "",
+        "level": "0",
+        "out": "pwm",
+        "sermin": "1000",
+        "sermax": "2000",
+        "freq": "50",
+        "x": 540,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "cbafea9e40d0f29c",
+        "type": "pi-gpiod in",
+        "z": "cf03ab0e689813f0",
+        "name": "INPUT PIR",
+        "host": "163.10.53.51",
+        "port": 8888,
+        "pin": "14",
+        "intype": "PUD_OFF",
+        "debounce": "25",
+        "read": false,
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "4166143f3d33d7f4"
+            ]
+        ]
+    },
+    {
+        "id": "120c2079f10b68cd",
+        "type": "ui-switch",
+        "z": "cf03ab0e689813f0",
+        "d": true,
+        "name": "",
+        "label": "switch",
+        "group": "485cb9e0b0b29368",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "45dfe9c6105dba88"
+            ]
+        ]
+    },
+    {
+        "id": "45dfe9c6105dba88",
+        "type": "change",
+        "z": "cf03ab0e689813f0",
+        "name": "Guardar Valor Switch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "switch",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4166143f3d33d7f4",
+        "type": "switch",
+        "z": "cf03ab0e689813f0",
+        "name": "",
+        "property": "switch",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "cdf3689779eba677"
+            ]
+        ]
+    },
+    {
+        "id": "cdf3689779eba677",
+        "type": "debug",
+        "z": "cf03ab0e689813f0",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 220,
+        "wires": []
+    }
+]
