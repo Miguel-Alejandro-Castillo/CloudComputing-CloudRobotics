@@ -1,0 +1,49 @@
+services:
+  nodered:
+    build:
+      context: ./nodered
+      dockerfile: Dockerfile
+    container_name: robot-nodered
+    restart: unless-stopped
+    #depends_on:
+    #  - mosquitto
+    ports:
+      - "1889:1880"
+    environment:
+      TZ: America/Argentina/Buenos_Aires
+      MQTT_HOST: mosquitto
+      MQTT_PORT: 1883
+      ROBOT_ID: robot-01
+      # L298N - motores
+      MOTOR_LEFT_IN1: 17
+      MOTOR_LEFT_IN2: 27
+      MOTOR_RIGHT_IN3: 22
+      MOTOR_RIGHT_IN4: 23
+
+      MOTOR_LEFT_ENA: 12
+      MOTOR_RIGHT_ENB: 13
+
+      # HC-SR04
+      HC_SR04_TRIGGER_GPIO: 24
+      HC_SR04_ECHO_GPIO: 25
+
+      # HW-096 - sensores IR
+      IR_LEFT_OUTER: 5
+      IR_LEFT_INNER: 6
+      IR_RIGHT_INNER: 16
+      IR_RIGHT_OUTER: 19
+
+      # SG90 - servo HC-SR04
+      SERVO_GPIO: 18
+    volumes:
+      - ./nodered/data:/data
+    #devices:
+    #  - /dev/gpiochip0:/dev/gpiochip0
+    group_add:
+      - "${GPIO_GID:-997}"
+    networks:
+      - robot-net
+networks:
+  robot-net:
+    name: robot-net
+    driver: bridge
